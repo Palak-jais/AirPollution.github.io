@@ -40,7 +40,7 @@ btn.addEventListener("click",()=>{
 });
 function fetchapi(_city){
     
-    url='http://api.openweathermap.org/geo/1.0/direct?q='+ _city +'&appid=' + '6a0fb6b3ce2d4b202bcd0df6948ac3b9';
+    url='https://api.openweathermap.org/geo/1.0/direct?q='+ _city +'&appid=' + '6a0fb6b3ce2d4b202bcd0df6948ac3b9';
    // fetch(url)
     //.then((response) => response.json())
     //.then((data) => console.log(data));
@@ -57,7 +57,7 @@ function cityDetails(info){
     const longitude=info[0].lon;
     //console.log(latitude);
     //console.log(longitude);
-    api='http://api.openweathermap.org/data/2.5/air_pollution?lat='+latitude +'&lon='+longitude + '&appid='+'6a0fb6b3ce2d4b202bcd0df6948ac3b9'
+    api='https://api.openweathermap.org/data/2.5/air_pollution?lat='+latitude +'&lon='+longitude + '&appid='+'6a0fb6b3ce2d4b202bcd0df6948ac3b9'
    //fetch(api)
    //.then((response) => response.json())
    //.then((data) => console.log(data));
@@ -81,7 +81,7 @@ function onSuccess(position){
     infoTxt.innerHTML="Getting pollution details";
     infoTxt.classList.add("pending");
   const{latitude,longitude}=position.coords;
-  api='http://api.openweathermap.org/data/2.5/air_pollution?lat='+latitude +'&lon='+longitude + '&appid='+'6a0fb6b3ce2d4b202bcd0df6948ac3b9'
+  api='https://api.openweathermap.org/data/2.5/air_pollution?lat='+latitude +'&lon='+longitude + '&appid='+'6a0fb6b3ce2d4b202bcd0df6948ac3b9'
   // fetch(api)
   // .then((response) => response.json())
   // .then((data) => console.log(data));

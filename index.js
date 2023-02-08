@@ -78,7 +78,7 @@ locationbtn.addEventListener("click",()=>{
 });
 
 function onSuccess(position){
-    infoTxt.innerHTML="Getting weather details";
+    infoTxt.innerHTML="Getting pollution details";
     infoTxt.classList.add("pending");
   const{latitude,longitude}=position.coords;
   api='http://api.openweathermap.org/data/2.5/air_pollution?lat='+latitude +'&lon='+longitude + '&appid='+'6a0fb6b3ce2d4b202bcd0df6948ac3b9'

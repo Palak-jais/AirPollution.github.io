@@ -82,15 +82,15 @@ function onSuccess(position){
     infoTxt.classList.add("pending");
   const{latitude,longitude}=position.coords;
   api='http://api.openweathermap.org/data/2.5/air_pollution?lat='+latitude +'&lon='+longitude + '&appid='+'6a0fb6b3ce2d4b202bcd0df6948ac3b9'
-   fetch(api)
-   .then((response) => response.json())
-   .then((data) => console.log(data));
+  // fetch(api)
+  // .then((response) => response.json())
+  // .then((data) => console.log(data));
 
   fetch(api).then(response =>response.json()).then(result=>airDetails(result));
 
 }
 function onError(error){
-    console.log(error);
+  //  console.log(error);
     infoTxt.classList.add("error");
     
 }
